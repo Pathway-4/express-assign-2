@@ -45,6 +45,18 @@ app.post("/data", (req, res) => {
 });
 ```
 
+## Middleware
+
+I used :
+
+```js
+app.use((req, res, next) => {
+  res.status(404).json({ message: "Not found" });
+});
+```
+
+This would show when the user can't find the json file or has an error.
+
 ## Thunder Client
 
 I used thunder client to test my app requests.
